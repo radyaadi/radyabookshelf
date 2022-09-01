@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Book Shelf</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <div class="modal-overlay">
+            <div class="container">
+                <i class="fas fa-exclamation-circle"></i>
+                <h2>Apakah anda yakin ingin menghapus buku ini ?</h2>
+                <div class="modal-action">
+                    <button class="btn-yes" id="btn-yes">Ya</button>
+                    <button class="btn-no" id="btn-no">Tidak</button>
+                </div>
+            </div>
+        </div>
+        <section class="form-content">
+            <div class="title">
+                <h1>Masukkan Data Buku</h1>
+            </div>
+            <form action="" class="form-add-book" id="book-form">
+                <div class="input">
+                    <label for="title">Judul Buku</label>
+                    <input id="title" type="text" placeholder="Masukkan Judul" required>
+                </div>
+                <div class="input">
+                    <label for="author">Penulis</label>
+                    <input id="author" type="text" placeholder="Masukkan Penulis" required>
+                </div>
+                <div class="input">
+                    <label for="year">Tahun Terbit</label>
+                    <input id="year" type="number" placeholder="Masukkan Tahun Terbit" required>
+                </div>
+                <div class="input">
+                    <input type="submit" value="Submit" name="submit" class="btn-submit">
+                </div>
+            </form>
+        </section>
+        <section class="search-list">
+            <div class="title">
+                <h1>Cari Buku</h1>
+            </div>
+            <form action="" class="form-search-book" id="search-form">
+                <div class="search-input">
+                    <input id="search-title" type="text" placeholder="Masukkan Judul Buku yang Dicari" required>
+                    <input type="submit" value="Cari" name="search" class="btn-search" id="btn-search">
+                </div>
+            </form>
+            <div class="search-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Judul</th>
+                            <th>Penerbit</th>
+                            <th>Tahun Terbit</th>
+                        </tr>
+                    </thead>
+                    <tbody id="search-result">
+                        <!-- <tr>
+                            <td>Test Search</td>
+                            <td>Radya Adi Anggara</td>
+                            <td>2022</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="book-list">
+            <div class="title">
+                <h1>Daftar Buku Belum Dibaca</h1>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Judul</th>
+                            <th>Penerbit</th>
+                            <th>Tahun Terbit</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="uncomplete-book-list">
+                        <!-- <tr>
+                            <td>Test Uncomplete</td>
+                            <td>Radya Adi Anggara</td>
+                            <td>2022</td>
+                            <td>
+                                <div class="action">
+                                    <button class="btn-check"><i class="fas fa-check"></i></button>
+                                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="book-list">
+            <div class="title">
+                <h1>Daftar Buku Telah Dibaca</h1>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Judul</th>
+                            <th>Penerbit</th>
+                            <th>Tahun Terbit</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="complete-book-list">
+                        <!-- <tr>
+                            <td>Test Complete</td>
+                            <td>Radya Adi Anggara</td>
+                            <td>2022</td>
+                            <td>
+                                <div class="action">
+                                    <button class="btn-undo"><i class="fas fa-undo"></i></button>
+                                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
